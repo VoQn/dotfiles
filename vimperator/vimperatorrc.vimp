@@ -1,0 +1,90 @@
+" runtime and rcSource setting
+" ==========================================================================
+
+set runtimepath=/Users/VoQn/.vimperator
+source! /Users/VoQn/.vimperatorrc.local
+
+" Options
+set gui=addons,nobookmarks,nomenu,nonavigation,tabs
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+" remap utility commands
+" ==========================================================================
+
+" loading my vimperatorrc key map
+noremap ,s :so<Space>~/.vimperatorrc<cr>
+noremap ,S :mapc<cr>:imap<cr>:cmapc<cr>vmapc<cr>:so<Space>~/.vimperatorrc<cr>
+
+"
+map <C-r> :restart<cr>
+
+" brawsing key mapping remap
+noremap j 7j
+noremap k 7k
+noremap J <C-d>
+noremap K <C-u>
+noremap f F
+noremap F f
+
+" command mode key mapping remap
+" skk
+cmap <C-j> <nop>
+cnoremap <C-n> <Tab>
+cnoremap <C-p> <S-Tab>
+
+" Mark
+qmark L ldr
+qmark F fl
+
+" ==========================================================================
+" copy.js
+noremap c :copy titleAndURL<CR>
+
+
+" direct_bookmark.js
+let g:direct_sbm_use_services_by_tag = "h"
+let g:direct_sbm_use_services_by_post = "hd"
+noremap ,a :btags<CR>
+noremap a :sbm<Space>
+
+" sbmCommentsViewer.js
+noremap ,b :viewSBMComments<CR>
+noremap ,B :bentry<CR>
+
+" multi_requeter.js
+noremap ,mt :mr<Space>twitter-search-yats<Space>
+noremap ,mT :mr<Space>twitter-search-yats<Space>VoQn\ OR\ ぼきゅん<cr>
+noremap ,Mt :mr!<Space>twitter-search-yats<Space>
+noremap ,MT :mr!<Space>twitter-search-yats<Space>VoQn<cr>
+noremap ,mf :mr<Space>favotter-new<Space>
+noremap ,mf :mr<Space>favotter-new<Space>VoQn<cr>
+noremap ,Mf :mr!<Space>favotter-new<Space>
+noremap ,MF :mr!<Space>favotter-new<Space>VoQn<cr>
+
+" ldrize_cooperation.js
+noremap q :toggleldrizecooperation<CR>
+
+" twittperator.js
+abbrev -j .title '"' + buffer.title + '"'
+abbrev #v #vimperator
+abbrev -j .url plugins.bitly.jmp(buffer.URL)
+abbrev -j .tu abbreviations.get(modes.INSET, '.title').text + ' - ' + plugins.bitly.jmp(buffer.URL)
+noremap ,t :tw
+noremap ,T :tw!?
+noremap ,@ :tw!@<CR>
+
+" feedSomeKeys_3.js
+command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+lazy fmaps -u='mail\.google\.com/mail' c / j k n p o u e x s r a # [ ] ? gi gs gt gd ga gc
+lazy fmaps -u='mail\.google\.com/mail/.*/[0-9a-f]+$' c / j,n k,p n,j p,k o u e x s r a # [ ] ? gi gs gt gd ga gc
+lazy fmaps -u='www\.google\.co\.jp/reader' -events=vkeypress j k n p m s v A r S N P X O gh ga gs gt gu u / ? J K
+lazy fmaps -u='(fastladder|livedoor)\.com/reader' j k s a p o v c i <Space> <S-Space> z b < > q w e <Delete> J,<Space> K,<S-Space> g u T e,T
+
+" Using ChirpUserStream
+let g:twittperator_user = 1
+let g:twittperator_plugin_echo_tweet = 1
+
+" colorsheme
+" colorscheme sweets
+
+" vim: set ft=vimperator:
