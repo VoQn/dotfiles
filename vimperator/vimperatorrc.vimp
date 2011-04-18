@@ -2,7 +2,7 @@
 " ==========================================================================
 
 set runtimepath=/Users/VoQn/.vimperator
-source! /Users/VoQn/.vimperatorrc.local
+source /Users/VoQn/.vimperator/vimperatorrc.vimp
 
 " Options
 set gui=addons,nobookmarks,nomenu,nonavigation,tabs
@@ -53,13 +53,9 @@ noremap ,B :bentry<CR>
 
 " multi_requeter.js
 noremap ,mt :mr<Space>twitter-search-yats<Space>
-noremap ,mT :mr<Space>twitter-search-yats<Space>VoQn\ OR\ ぼきゅん<cr>
 noremap ,Mt :mr!<Space>twitter-search-yats<Space>
-noremap ,MT :mr!<Space>twitter-search-yats<Space>VoQn<cr>
 noremap ,mf :mr<Space>favotter-new<Space>
-noremap ,mf :mr<Space>favotter-new<Space>VoQn<cr>
 noremap ,Mf :mr!<Space>favotter-new<Space>
-noremap ,MF :mr!<Space>favotter-new<Space>VoQn<cr>
 
 " ldrize_cooperation.js
 noremap q :toggleldrizecooperation<CR>
