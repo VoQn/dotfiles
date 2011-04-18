@@ -1,0 +1,19 @@
+h1. DotFiles
+h2. Summary
+p. This Repository is My common Environmental Settings.
+- Zsh := Terminal Emulator
+- Vim/GVim(MacVim) := Editor
+- tmux := Terminal Multiplexer
+- SKK := IME
+- Vimperator := Web Browser Addon (Firefox)
+
+p. This Repository except each plugin files. only setting file.I put this directories on Dropbox with plugin files, and synchronize it in the plural machine my use.
+
+h2. Installization
+p. First, git clone this repository, then run link.sh.
+<pre>
+$ git clone git://github.com/VoQn/dotfiles.git dotfiles
+$ cd dotfiles
+$ sh link.sh
+</pre>
+p. Setting files link to your $HOME Directory.
