@@ -13,7 +13,4 @@ sh vimln.sh
 ln -fs $PWD/tmux/tmux.conf ~/.tmux.conf
 
 # vimperator
-ln -fs $PWD/vimperator/vimperatorrc $HOME/.vimperatorrc
-mkdir $HOME/.vimperator/
-ln -fs $PWD/vimperator/vimpfiles/color $HOME/.vimperator/color
-ln -fs $PWD/vimperator/vimpfiles/plugin $HOME/.vimperator/plugin
+sh vimpln.sh
